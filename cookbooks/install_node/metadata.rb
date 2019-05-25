@@ -19,4 +19,5 @@ chef_version '>= 13.0'
 #
 # source_url 'https://github.com/<insert_org_here>/install_node'
 
-depends "selinux", "~>2.0.3"
+depends 'selinux', '~>2.0.3'
+depends 'firewall', '~> 2.7.0'
