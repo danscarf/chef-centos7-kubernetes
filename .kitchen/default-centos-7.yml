@@ -1,7 +1,0 @@
----
-hostname: 127.0.0.1
-port: '2200'
-username: vagrant
-ssh_key: "/home/dan/src/github/danscarf/chef-centos7-kubernetes/.kitchen/kitchen-vagrant/default-centos-7/.vagrant/machines/default/virtualbox/private_key"
-last_action: verify
-last_error: 

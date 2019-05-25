@@ -1,97 +1,5 @@
-I, [2019-05-19T19:26:17.450487 #4472]  INFO -- default-centos-7: -----> Creating <default-centos-7>...
-I, [2019-05-19T19:26:19.752600 #4472]  INFO -- default-centos-7: Bringing machine 'default' up with 'virtualbox' provider...
-I, [2019-05-19T19:26:19.974255 #4472]  INFO -- default-centos-7: ==> default: Importing base box 'bento/centos-7'...
-I, [2019-05-19T19:26:32.430043 #4472]  INFO -- default-centos-7: [KProgress: 20%[KProgress: 30%[KProgress: 50%[KProgress: 60%[KProgress: 80%[KProgress: 90%[K==> default: Matching MAC address for NAT networking...
-I, [2019-05-19T19:26:32.627554 #4472]  INFO -- default-centos-7: ==> default: Checking if box 'bento/centos-7' version '201808.24.0' is up to date...
-I, [2019-05-19T19:26:33.415394 #4472]  INFO -- default-centos-7: ==> default: A newer version of the box 'bento/centos-7' for provider 'virtualbox' is
-I, [2019-05-19T19:26:33.415562 #4472]  INFO -- default-centos-7: ==> default: available! You currently have version '201808.24.0'. The latest is version
-I, [2019-05-19T19:26:33.415621 #4472]  INFO -- default-centos-7: ==> default: '201812.27.0'. Run `vagrant box update` to update.
-I, [2019-05-19T19:26:34.194983 #4472]  INFO -- default-centos-7: ==> default: Setting the name of the VM: kitchen-chef-centos7-kubernetes-default-centos-7
-I, [2019-05-19T19:26:34.914246 #4472]  INFO -- default-centos-7: ==> default: Fixed port collision for 22 => 2222. Now on port 2200.
-I, [2019-05-19T19:26:35.391583 #4472]  INFO -- default-centos-7: ==> default: Vagrant has detected a configuration issue which exposes a
-I, [2019-05-19T19:26:35.391690 #4472]  INFO -- default-centos-7: ==> default: vulnerability with the installed version of VirtualBox. The
-I, [2019-05-19T19:26:35.391735 #4472]  INFO -- default-centos-7: ==> default: current guest is configured to use an E1000 NIC type for a
-I, [2019-05-19T19:26:35.391770 #4472]  INFO -- default-centos-7: ==> default: network adapter which is vulnerable in this version of VirtualBox.
-I, [2019-05-19T19:26:35.391801 #4472]  INFO -- default-centos-7: ==> default: Ensure the guest is trusted to use this configuration or update
-I, [2019-05-19T19:26:35.391829 #4472]  INFO -- default-centos-7: ==> default: the NIC type using one of the methods below:
-I, [2019-05-19T19:26:35.391854 #4472]  INFO -- default-centos-7: ==> default: 
-I, [2019-05-19T19:26:35.391880 #4472]  INFO -- default-centos-7: ==> default:   https://www.vagrantup.com/docs/virtualbox/configuration.html#default-nic-type
-I, [2019-05-19T19:26:35.391906 #4472]  INFO -- default-centos-7: ==> default:   https://www.vagrantup.com/docs/virtualbox/networking.html#virtualbox-nic-type
-I, [2019-05-19T19:26:35.392393 #4472]  INFO -- default-centos-7: ==> default: Clearing any previously set network interfaces...
-I, [2019-05-19T19:26:35.471467 #4472]  INFO -- default-centos-7: ==> default: Preparing network interfaces based on configuration...
-I, [2019-05-19T19:26:35.472082 #4472]  INFO -- default-centos-7:     default: Adapter 1: nat
-I, [2019-05-19T19:26:35.548699 #4472]  INFO -- default-centos-7: ==> default: Forwarding ports...
-I, [2019-05-19T19:26:35.659043 #4472]  INFO -- default-centos-7:     default: 22 (guest) => 2200 (host) (adapter 1)
-I, [2019-05-19T19:26:35.959872 #4472]  INFO -- default-centos-7: ==> default: Running 'pre-boot' VM customizations...
-I, [2019-05-19T19:26:36.036849 #4472]  INFO -- default-centos-7: ==> default: Booting VM...
-I, [2019-05-19T19:26:36.369642 #4472]  INFO -- default-centos-7: ==> default: Waiting for machine to boot. This may take a few minutes...
-I, [2019-05-19T19:26:36.864015 #4472]  INFO -- default-centos-7:     default: SSH address: 127.0.0.1:2200
-I, [2019-05-19T19:26:36.864553 #4472]  INFO -- default-centos-7:     default: SSH username: vagrant
-I, [2019-05-19T19:26:36.865208 #4472]  INFO -- default-centos-7:     default: SSH auth method: private key
-I, [2019-05-19T19:26:59.430251 #4472]  INFO -- default-centos-7:     default: 
-I, [2019-05-19T19:26:59.430335 #4472]  INFO -- default-centos-7:     default: Vagrant insecure key detected. Vagrant will automatically replace
-I, [2019-05-19T19:26:59.430379 #4472]  INFO -- default-centos-7:     default: this with a newly generated keypair for better security.
-I, [2019-05-19T19:27:06.150250 #4472]  INFO -- default-centos-7:     default: 
-I, [2019-05-19T19:27:06.150577 #4472]  INFO -- default-centos-7:     default: Inserting generated public key within guest...
-I, [2019-05-19T19:27:07.149393 #4472]  INFO -- default-centos-7:     default: Removing insecure key from the guest if it's present...
-I, [2019-05-19T19:27:08.181644 #4472]  INFO -- default-centos-7:     default: Key inserted! Disconnecting and reconnecting using new SSH key...
-I, [2019-05-19T19:27:09.376056 #4472]  INFO -- default-centos-7: ==> default: Machine booted and ready!
-I, [2019-05-19T19:27:09.378231 #4472]  INFO -- default-centos-7: ==> default: Checking for guest additions in VM...
-I, [2019-05-19T19:27:09.456822 #4472]  INFO -- default-centos-7: ==> default: Setting hostname...
-I, [2019-05-19T19:27:11.909279 #4472]  INFO -- default-centos-7: ==> default: Mounting shared folders...
-I, [2019-05-19T19:27:11.910693 #4472]  INFO -- default-centos-7:     default: /tmp/omnibus/cache => /home/dan/.kitchen/cache
-I, [2019-05-19T19:27:13.838541 #4472]  INFO -- default-centos-7: ==> default: Machine not provisioned because `--no-provision` is specified.
-I, [2019-05-19T19:27:18.792760 #4472]  INFO -- default-centos-7: [SSH] Established
-I, [2019-05-19T19:27:18.793529 #4472]  INFO -- default-centos-7: Vagrant instance <default-centos-7> created.
-I, [2019-05-19T19:27:18.794428 #4472]  INFO -- default-centos-7: Finished creating <default-centos-7> (1m1.34s).
-I, [2019-05-19T19:27:18.794602 #4472]  INFO -- default-centos-7: -----> Converging <default-centos-7>...
-I, [2019-05-19T19:27:18.795224 #4472]  INFO -- default-centos-7: Preparing files for transfer
-I, [2019-05-19T19:27:18.795356 #4472]  INFO -- default-centos-7: Preparing dna.json
-I, [2019-05-19T19:27:18.795636 #4472]  INFO -- default-centos-7: Preparing cookbooks from project directory
-I, [2019-05-19T19:27:18.796952 #4472]  INFO -- default-centos-7: Removing non-cookbook files before transfer
-I, [2019-05-19T19:27:18.798769 #4472]  INFO -- default-centos-7: Preparing data_bags
-I, [2019-05-19T19:27:18.799567 #4472]  INFO -- default-centos-7: Preparing environments
-I, [2019-05-19T19:27:18.800271 #4472]  INFO -- default-centos-7: Preparing roles
-I, [2019-05-19T19:27:18.801130 #4472]  INFO -- default-centos-7: Preparing solo.rb
-I, [2019-05-19T19:27:18.941197 #4472]  INFO -- default-centos-7: el 7 x86_64
-I, [2019-05-19T19:27:18.941303 #4472]  INFO -- default-centos-7: Getting information for chef stable 14.12.3 for el...
-I, [2019-05-19T19:27:18.941357 #4472]  INFO -- default-centos-7: downloading https://omnitruck.chef.io/stable/chef/metadata?v=14.12.3&p=el&pv=7&m=x86_64
-I, [2019-05-19T19:27:18.941390 #4472]  INFO -- default-centos-7:   to file /tmp/install.sh.3138/metadata.txt
-I, [2019-05-19T19:27:18.943505 #4472]  INFO -- default-centos-7: trying wget...
-I, [2019-05-19T19:27:19.252078 #4472]  INFO -- default-centos-7: sha1	dea8e74571b15ebb65e03269f0b7c39b49819148
-I, [2019-05-19T19:27:19.252177 #4472]  INFO -- default-centos-7: sha256	a8baf9229d392d723ff42e6b529b7b18411f5909d13247dd39ec0a073b37bb8e
-I, [2019-05-19T19:27:19.252229 #4472]  INFO -- default-centos-7: url	https://packages.chef.io/files/stable/chef/14.12.3/el/7/chef-14.12.3-1.el7.x86_64.rpm
-I, [2019-05-19T19:27:19.252273 #4472]  INFO -- default-centos-7: version	14.12.3
-I, [2019-05-19T19:27:19.256741 #4472]  INFO -- default-centos-7: downloaded metadata file looks valid...
-I, [2019-05-19T19:27:19.275525 #4472]  INFO -- default-centos-7: downloading https://packages.chef.io/files/stable/chef/14.12.3/el/7/chef-14.12.3-1.el7.x86_64.rpm
-I, [2019-05-19T19:27:19.275622 #4472]  INFO -- default-centos-7:   to file /tmp/omnibus/cache/chef-14.12.3-1.el7.x86_64.rpm
-I, [2019-05-19T19:27:19.277323 #4472]  INFO -- default-centos-7: trying wget...
-I, [2019-05-19T19:27:22.897304 #4472]  INFO -- default-centos-7: Comparing checksum with sha256sum...
-I, [2019-05-19T19:27:23.435365 #4472]  INFO -- default-centos-7: Installing chef 14.12.3
-I, [2019-05-19T19:27:23.435451 #4472]  INFO -- default-centos-7: installing with rpm...
-I, [2019-05-19T19:27:23.566711 #4472]  INFO -- default-centos-7: warning: /tmp/omnibus/cache/chef-14.12.3-1.el7.x86_64.rpm: Header V4 DSA/SHA1 Signature, key ID 83ef826a: NOKEY
-I, [2019-05-19T19:27:24.179727 #4472]  INFO -- default-centos-7: Preparing...                                                            (100%)#                                 (100%)##                                (100%)###                               (100%)####                              (100%)#####                             (100%)######                            (100%)#######                           (100%)########                          (100%)#########                         (100%)##########                        (100%)###########                       (100%)############                      (100%)#############                     (100%)##############                    (100%)###############                   (100%)################                  (100%)#################                 (100%)##################                (100%)###################               (100%)####################              (100%)#####################             (100%)######################            (100%)#######################           (100%)########################          (100%)#########################         (100%)##########################        (100%)###########################       (100%)############################      (100%)#############################     (100%)##############################    (100%)###############################   (100%)################################  (100%)################################# (100%)################################# [100%]
-I, [2019-05-19T19:27:24.236965 #4472]  INFO -- default-centos-7: Updating / installing...
-I, [2019-05-19T19:27:38.017925 #4472]  INFO -- default-centos-7:    1:chef-14.12.3-1.el7                                                 (  1%)#                                 (  4%)##                                (  7%)###                               ( 10%)####                              ( 13%)#####                             ( 16%)######                            ( 19%)#######                           ( 22%)########                          ( 25%)#########                         ( 28%)##########                        ( 31%)###########                       ( 34%)############                      ( 37%)#############                     ( 40%)##############                    ( 43%)###############                   ( 46%)################                  ( 49%)#################                 ( 51%)##################                ( 54%)###################               ( 57%)####################              ( 60%)#####################             ( 63%)######################            ( 66%)#######################           ( 69%)########################          ( 72%)#########################         ( 75%)##########################        ( 78%)###########################       ( 81%)############################      ( 84%)#############################     ( 87%)##############################    ( 90%)###############################   ( 93%)################################  ( 96%)################################# ( 99%)################################# [100%]
-I, [2019-05-19T19:27:38.814286 #4472]  INFO -- default-centos-7: Thank you for installing Chef!
-I, [2019-05-19T19:27:38.966334 #4472]  INFO -- default-centos-7: Transferring files to <default-centos-7>
-I, [2019-05-19T19:27:43.298519 #4472]  INFO -- default-centos-7: Starting Chef Client, version 14.12.3
-I, [2019-05-19T19:27:55.491664 #4472]  INFO -- default-centos-7: Creating a new client identity for default-centos-7 using the validator key.
-I, [2019-05-19T19:27:55.736692 #4472]  INFO -- default-centos-7: resolving cookbooks for run list: []
-I, [2019-05-19T19:27:55.736787 #4472]  INFO -- default-centos-7: Synchronizing Cookbooks:
-I, [2019-05-19T19:27:55.749130 #4472]  INFO -- default-centos-7: Installing Cookbook Gems:
-I, [2019-05-19T19:27:55.749222 #4472]  INFO -- default-centos-7: Compiling Cookbooks...
-I, [2019-05-19T19:27:55.749255 #4472]  INFO -- default-centos-7: [2019-05-20T02:27:55+00:00] WARN: Node default-centos-7 has an empty run list.
-I, [2019-05-19T19:27:55.749277 #4472]  INFO -- default-centos-7: Converging 0 resources
-I, [2019-05-19T19:27:55.862168 #4472]  INFO -- default-centos-7: 
-I, [2019-05-19T19:27:55.862239 #4472]  INFO -- default-centos-7: Running handlers:
-I, [2019-05-19T19:27:55.862266 #4472]  INFO -- default-centos-7: Running handlers complete
-I, [2019-05-19T19:27:55.862288 #4472]  INFO -- default-centos-7: Chef Client finished, 0/0 resources updated in 12 seconds
-I, [2019-05-19T19:27:55.875363 #4472]  INFO -- default-centos-7: Downloading files from <default-centos-7>
-I, [2019-05-19T19:27:55.877572 #4472]  INFO -- default-centos-7: Finished converging <default-centos-7> (0m37.08s).
-I, [2019-05-19T19:27:55.877936 #4472]  INFO -- default-centos-7: -----> Setting up <default-centos-7>...
-I, [2019-05-19T19:27:55.879240 #4472]  INFO -- default-centos-7: Finished setting up <default-centos-7> (0m0.00s).
-I, [2019-05-19T19:27:55.879498 #4472]  INFO -- default-centos-7: -----> Verifying <default-centos-7>...
-I, [2019-05-19T19:27:55.880247 #4472]  INFO -- default-centos-7: Preparing files for transfer
-I, [2019-05-19T19:27:55.880843 #4472]  INFO -- default-centos-7: Transferring files to <default-centos-7>
-I, [2019-05-19T19:27:55.881704 #4472]  INFO -- default-centos-7: Finished verifying <default-centos-7> (0m0.00s).
+I, [2019-05-19T20:22:13.219785 #6121]  INFO -- default-centos-7: -----> Destroying <default-centos-7>...
+I, [2019-05-19T20:22:17.337498 #6121]  INFO -- default-centos-7: ==> default: Forcing shutdown of VM...
+I, [2019-05-19T20:22:18.763030 #6121]  INFO -- default-centos-7: ==> default: Destroying VM and associated drives...
+I, [2019-05-19T20:22:19.342795 #6121]  INFO -- default-centos-7: Vagrant instance <default-centos-7> destroyed.
+I, [2019-05-19T20:22:19.343874 #6121]  INFO -- default-centos-7: Finished destroying <default-centos-7> (0m6.12s).
