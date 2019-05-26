@@ -33,10 +33,21 @@ end
 
 sysctl 'net.bridge.bridge-nf-call-ip6tables' do
     value 1
-  end
+end
 
-  ['yum-utils','device-mapper-persistent-data','lvm2'].each do |p|
-    package p do
-      action :install
-    end
+['yum-utils','device-mapper-persistent-data','lvm2'].each do |p|
+  package p do
+    action :install
   end
+end
+
+yum_repository 'docker-ce-stable' do
+  baseurl "https://download.docker.com/linux/centos/7/x86_64/stable/"
+  gpgcheck true
+  gpgkey "https://download.docker.com/linux/centos/gpg"
+  action :create
+end
+
+package 'docker-ce' do
+  action :install
+end
