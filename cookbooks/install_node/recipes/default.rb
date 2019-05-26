@@ -51,3 +51,20 @@ end
 package 'docker-ce' do
   action :install
 end
+
+yum_repository 'kubernetes' do
+  baseurl "https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64"
+  gpgcheck true
+  gpgkey [
+    'https://packages.cloud.google.com/yum/doc/yum-key.gpg',
+    'https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg'
+  ]
+  repo_gpgcheck true
+  action :create
+end
+
+['kubelet', 'kubeadm', 'kubectl'].each do |p|
+  package p do
+    action :install
+  end
+end
