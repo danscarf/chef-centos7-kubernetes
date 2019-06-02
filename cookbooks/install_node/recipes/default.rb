@@ -41,6 +41,10 @@ end
   end
 end
 
+execute 'disable_swap' do
+  command 'swapoff -av'
+end
+
 yum_repository 'docker-ce-stable' do
   baseurl "https://download.docker.com/linux/centos/7/x86_64/stable/"
   gpgcheck true
@@ -51,6 +55,32 @@ end
 package 'docker-ce' do
   action :install
 end
+
+directory '/etc/docker' do
+  owner 'root'
+  group 'root'
+  mode '0755'
+  action :create
+end
+
+template '/etc/docker/daemon.json' do
+  source 'daemon.json.erb'
+  mode '0755'
+  owner 'root'
+  group 'root'
+end
+
+directory '/etc/systemd/system/docker.service.d' do
+  owner 'root'
+  group 'root'
+  mode '0755'
+  action :create
+end
+
+execute 'daemon-reload' do
+  command 'systemctl daemon-reload'
+end
+
 
 yum_repository 'kubernetes' do
   baseurl "https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64"
@@ -67,4 +97,12 @@ end
   package p do
     action :install
   end
+end
+
+service 'docker' do
+  action [ :enable, :start ]
+end
+
+service 'kubelet.service' do
+  action :enable
 end
